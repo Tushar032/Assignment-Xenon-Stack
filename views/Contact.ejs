@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #dbd034bd, #b67e59);
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff33;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 100%;
+      max-width: 800px; /* Adjust the value as needed */
+      border-radius: 10px;
+      color: #333;
+    }
+
+    form {
+      width: 50%; /* Adjust the value as needed */
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #cccccc28;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      resize: none; /* Prevent textarea resizing */
+    }
+
+    /* Limit the width of the textarea */
+    textarea {
+      width: calc(100% - 24px); /* Adjust the value as needed */
+    }
+
+    button {
+      background-color: #27ae60;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #219d54;
+    }
+
+    .image-container {
+      width: 40%; /* Adjust the value as needed */
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      form, .image-container {
+        width: 100%;
+      }
+    }
+  </style>
+  <title>Contact Us</title>
+</head>
+<body>
+
+  <div class="container">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <h2>Contact Us</h2>
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" maxlength="200" required></textarea>
+      </div>
+
+      <input type="hidden" name="access_key" value="421a5ab2-070f-4fd6-827e-e6e29bfac816">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="image-container">
+      <!-- Add your image source here -->
+      <img src="../images/telephone.jpg" alt="Image Description">
+    </div>
+  </div>
+
+</body>
+</html>
